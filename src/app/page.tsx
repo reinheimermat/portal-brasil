@@ -8,9 +8,12 @@ export default function Home() {
 
       <main className="cover flex h-screen flex-col justify-between text-white">
         <section className="my-auto">
-          <p className="lg:6xl text-center text-4xl md:text-5xl xl:text-7xl 2xl:text-8xl">
-            <span className="font-medium">CRIAMOS</span> PRODUTOS <br /> DE
-            SUCESSO E <span className="font-medium">TORNAMOS</span> <br /> A
+          <p className="lg:6xl text-center text-4xl italic md:text-5xl xl:text-7xl 2xl:text-8xl">
+            <span className="font-sans not-italic">CRIAMOS</span> PRODUTOS{' '}
+            <br /> DE SUCESSO{' '}
+            <span className="font-sans not-italic">
+              E TORNAMOS <br /> A{' '}
+            </span>
             BELEZA ACESSÍVEL
           </p>
         </section>
@@ -25,7 +28,7 @@ export default function Home() {
       </main>
 
       <section className="-mt-3 bg-[#212121] pb-28 pt-11 text-white">
-        <p className="container mx-auto px-4 text-center text-3xl italic leading-normal">
+        <p className="container mx-auto px-4 text-center text-2xl italic leading-normal md:text-4xl 2xl:text-5xl">
           Temos a inovação como base do nosso negócio. Não basta apenas conhecer
           as tendências, é necessário interpretá-las corretamente. Aplicamos
           isso na construção de produtos que valorizam a beleza, combinando

@@ -13,7 +13,8 @@ export default {
         foreground: 'var(--foreground)',
       },
       fontFamily: {
-        sans: 'minion-pro, sans-serif',
+        serif: 'minion-pro, sans-serif',
+        sans: '"neue-haas-grotesk-display", sans-serif',
       },
     },
   },
