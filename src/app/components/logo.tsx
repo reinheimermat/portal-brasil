@@ -7,6 +7,7 @@ const Logo = () => (
     height="21"
     fill="none"
     viewBox="0 0 140 21"
+    className="z-10"
   >
     <g clipPath="url(#clip0_114_126)">
       <g clipPath="url(#clip1_114_126)">

@@ -1,14 +1,21 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Menu } from 'lucide-react'
+// import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 import Logo from './logo'
+import { MenuDropdown } from './menu'
+import { Sidebar } from './sidebar'
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
+  const [isOpenSidebar, setIsOpenSidebar] = useState(false)
+
+  function handleToggleSidebar() {
+    setIsOpenSidebar(!isOpenSidebar)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,15 +36,21 @@ export function Header() {
       <div className="container mx-auto flex items-center justify-between px-4">
         <Logo />
         <div className="flex items-center gap-8">
-          <nav className="flex gap-5 font-sans tracking-widest">
+          <nav className="hidden gap-5 font-sans tracking-widest md:flex">
             <Link href="/about">Projetos</Link>
             <Link href="/about">Contato</Link>
           </nav>
-          <button>
+          {/* <button onClick={handleToggleSidebar} className="z-10">
             <Menu size={34} />
-          </button>
+          </button> */}
+          <MenuDropdown
+            isOpen={isOpenSidebar}
+            toggleMenu={handleToggleSidebar}
+          />
         </div>
       </div>
+
+      <Sidebar isOpen={isOpenSidebar} />
     </motion.header>
   )
 }
