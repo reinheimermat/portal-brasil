@@ -1,7 +1,16 @@
+'use client'
+
+import { motion, useScroll, useTransform } from 'framer-motion'
+
 import { Card } from './components/card'
 import { Header } from './components/header'
 
 export default function Home() {
+  const { scrollYProgress } = useScroll()
+  const text =
+    'Temos a inovação como base do nosso negócio. Não basta apenas conhecer as tendências, é necessário interpretá-las corretamente. Aplicamos isso na construção de produtos que valorizam a beleza, combinando design e estratégia para fortalecer sua marca.'
+  const words = text.split(' ')
+
   return (
     <div>
       <Header />
@@ -29,13 +38,26 @@ export default function Home() {
         </section>
       </main>
 
-      <section className="-mt-3 bg-[#212121] pb-28 pt-11 text-white">
-        <p className="container mx-auto px-4 text-center text-2xl italic leading-normal md:text-4xl 2xl:text-5xl">
-          Temos a inovação como base do nosso negócio. Não basta apenas conhecer
-          as tendências, é necessário interpretá-las corretamente. Aplicamos
-          isso na construção de produtos que valorizam a beleza, combinando
-          design e estratégia para fortalecer sua marca.
-        </p>
+      <section className="-mt-3 bg-[#212121] pb-28 pt-11">
+        <div className="container mx-auto px-4 text-center text-2xl italic leading-normal md:text-4xl 2xl:text-5xl">
+          {words.map((word, index) => {
+            const color = useTransform(
+              scrollYProgress,
+              [0 + index * 0.005, 0.2 + index * 0.005],
+              ['#454545', '#fff'],
+            )
+
+            return (
+              <motion.span
+                key={index}
+                style={{ color }}
+                className="mr-1 inline-block"
+              >
+                {word}
+              </motion.span>
+            )
+          })}
+        </div>
       </section>
 
       <section className="container mx-auto space-y-5 px-4 pt-14">
