@@ -47,7 +47,7 @@ export function Sidebar({ isOpen }: SidebarProps) {
       exit="exit"
       className="absolute inset-0 h-screen bg-[#212121]"
     >
-      <div className="container mx-auto flex h-screen flex-col justify-between px-4 pb-14 pt-52">
+      <div className="container mx-auto flex h-screen flex-col justify-between px-4 pb-8 pt-52">
         <section className="flex flex-col gap-5 font-sans text-7xl font-semibold">
           {links.map((link, index) => (
             <div

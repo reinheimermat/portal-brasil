@@ -29,7 +29,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className="container mx-auto mb-20 flex flex-col items-center justify-between gap-6 px-4 text-center font-sans text-lg tracking-wider md:flex-row md:text-start">
+        <section className="container mx-auto mb-8 flex flex-col items-center justify-between gap-6 px-4 text-center font-sans text-lg tracking-wider md:flex-row md:text-start">
           <p>
             Somos líderes no mercado brasileiro no segmento de fast fashion
             desde 2007

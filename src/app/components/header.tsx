@@ -39,9 +39,6 @@ export function Header() {
             <Link href="/about">Projetos</Link>
             <Link href="/about">Contato</Link>
           </nav>
-          {/* <button onClick={handleToggleSidebar} className="z-10">
-            <Menu size={34} />
-          </button> */}
           <MenuDropdown
             isOpen={isOpenSidebar}
             toggleMenu={handleToggleSidebar}
