@@ -23,14 +23,17 @@ const year = new Date().getFullYear()
 
 const links = [
   {
+    number: 1,
     title: 'Home',
     href: '/',
   },
   {
+    number: 2,
     title: 'Projetos',
     href: '/projetos',
   },
   {
+    number: 3,
     title: 'Contato',
     href: '/contato',
   },
@@ -48,33 +51,36 @@ export function Sidebar({ isOpen }: SidebarProps) {
       className="absolute inset-0 h-screen bg-[#212121]"
     >
       <div className="container mx-auto flex h-screen flex-col justify-between px-4 pb-8 pt-52">
-        <section className="flex flex-col gap-5 font-sans text-7xl font-semibold">
+        <section className="flex flex-col gap-5 font-sans">
           {links.map((link, index) => (
-            <div
-              key={index}
-              className={clsx(
-                'relative block h-fit overflow-y-hidden uppercase',
-                hoveredIndex === index && 'w-full max-w-[25vw] overflow-x-auto',
-                hoveredIndex !== index && 'w-fit overflow-x-hidden',
-              )}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              <motion.span
-                animate={{ y: hoveredIndex === index ? '-100%' : '0%' }}
-                transition={{ duration: 0.2 }}
-                className="block font-sans"
+            <div className="flex items-start gap-12" key={index}>
+              <span className="text-sm md:text-lg">{link.number}.</span>
+              <div
+                className={clsx(
+                  'relative block h-fit overflow-y-hidden text-5xl font-semibold uppercase md:text-6xl lg:text-7xl',
+                  hoveredIndex === index &&
+                    'w-full max-w-[25vw] overflow-x-auto',
+                  hoveredIndex !== index && 'w-fit overflow-x-hidden',
+                )}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => setHoveredIndex(null)}
               >
-                <Link href={link.href}>{link.title}</Link>
-              </motion.span>
-
-              <motion.span
-                animate={{ y: hoveredIndex === index ? '0%' : '100%' }}
-                transition={{ duration: 0.2 }}
-                className="absolute left-0 top-0 block font-serif font-thin text-zinc-300"
-              >
-                (<Link href={link.href}>{link.title}</Link>)
-              </motion.span>
+                <motion.span
+                  animate={{ y: hoveredIndex === index ? '-100%' : '0%' }}
+                  transition={{ duration: 0.2 }}
+                  className="block font-sans"
+                >
+                  <Link href={link.href}>{link.title}</Link>
+                </motion.span>
+                <motion.span
+                  animate={{ y: hoveredIndex === index ? '0%' : '100%' }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute left-0 top-0 block font-serif font-thin text-zinc-300"
+                >
+                  (<Link href={link.href}>{link.title}</Link>)
+                </motion.span>
+              </div>
             </div>
           ))}
         </section>

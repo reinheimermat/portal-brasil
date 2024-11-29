@@ -18,11 +18,11 @@ export default function Home() {
       <main className="cover flex h-screen flex-col justify-between text-white">
         <section className="my-auto">
           <p className="text-center text-4xl italic md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
-            <span className="font-sans not-italic lg:text-[4rem] 2xl:text-[5.2rem]">
+            <span className="font-sans text-3xl not-italic md:text-[2.75rem] lg:text-[4rem] 2xl:text-[5.2rem]">
               CRIAMOS
             </span>{' '}
             PRODUTOS <br /> DE SUCESSO{' '}
-            <span className="font-sans not-italic lg:text-[4rem] 2xl:text-[5.2rem]">
+            <span className="font-sans text-3xl not-italic md:text-[2.75rem] lg:text-[4rem] 2xl:text-[5.2rem]">
               E TORNAMOS <br /> A{' '}
             </span>
             BELEZA ACESSÍVEL
@@ -38,8 +38,8 @@ export default function Home() {
         </section>
       </main>
 
-      <section className="-mt-3 bg-[#212121] pb-28 pt-11">
-        <div className="container mx-auto px-4 text-center text-2xl italic leading-normal md:text-4xl 2xl:text-5xl">
+      <section className="-mt-3 bg-[#212121] pb-20 pt-11 md:pb-28">
+        <div className="container mx-auto px-4 text-center italic leading-normal">
           {words.map((word, index) => {
             const color = useTransform(
               scrollYProgress,
@@ -51,7 +51,7 @@ export default function Home() {
               <motion.span
                 key={index}
                 style={{ color }}
-                className="mr-1 inline-block font-sans"
+                className="inline-block text-4xl md:text-6xl lg:text-7xl 2xl:text-8xl"
               >
                 {word}
               </motion.span>
