@@ -79,32 +79,36 @@ export function Sidebar({ isOpen }: SidebarProps) {
           ))}
         </section>
 
-        <footer className="flex items-center justify-between font-sans text-sm text-zinc-300">
-          <div className="col-span-2 font-serif text-5xl text-white">
+        <footer className="md:flex-0 flex flex-col gap-6 font-sans text-sm text-zinc-300 md:flex-row md:items-center md:justify-between md:gap-11">
+          <div className="font-serif text-3xl text-white md:text-4xl lg:text-5xl">
             <p>
-              <span className="font-sans text-4xl">Tornando a</span> beleza{' '}
-              <br /> acessível
+              <span className="font-sans text-2xl md:text-3xl lg:text-4xl">
+                Tornando a
+              </span>{' '}
+              beleza <br /> acessível
             </p>
           </div>
-          <div className="flex flex-col gap-1">
-            <span className="text-zinc-500">Conecte-se</span>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-          </div>
-          <div className="flex flex-col gap-1">
-            <span className="text-zinc-500">Localização</span>
-            <p>51 912345678</p>
-            <p>Rua fantasia Nº 26</p>
-            <p>Porto alegre rs brasil</p>
-          </div>
-          <div className="flex flex-col gap-1">
-            <span className="text-zinc-500">Copyright</span>
-            <p>
-              &copy; {year} <span>Portal Brasil</span>
-            </p>
-            <p>
-              Todos os direitos reservados. <br />
-            </p>
+          <div className="flex items-start justify-between md:flex-1">
+            <div className="flex flex-col gap-1">
+              <span className="text-zinc-500">Conecte-se</span>
+              <a href="#">LinkedIn</a>
+              <a href="#">Instagram</a>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-zinc-500">Localização</span>
+              <p>51 912345678</p>
+              <p>Rua fantasia Nº 26</p>
+              <p>Porto alegre rs brasil</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-zinc-500">Copyright</span>
+              <p>
+                &copy; {year} <span>Portal Brasil</span>
+              </p>
+              <p>
+                Todos os direitos reservados. <br />
+              </p>
+            </div>
           </div>
         </footer>
       </div>
