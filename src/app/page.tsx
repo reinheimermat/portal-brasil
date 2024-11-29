@@ -17,12 +17,12 @@ export default function Home() {
 
       <main className="cover flex h-screen flex-col justify-between text-white">
         <section className="my-auto">
-          <p className="lg:6xl text-center text-4xl italic md:text-5xl xl:text-7xl 2xl:text-8xl">
-            <span className="font-sans not-italic 2xl:text-[5.2rem]">
+          <p className="text-center text-4xl italic md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+            <span className="font-sans not-italic lg:text-[4rem] 2xl:text-[5.2rem]">
               CRIAMOS
             </span>{' '}
             PRODUTOS <br /> DE SUCESSO{' '}
-            <span className="font-sans not-italic 2xl:text-[5.2rem]">
+            <span className="font-sans not-italic lg:text-[4rem] 2xl:text-[5.2rem]">
               E TORNAMOS <br /> A{' '}
             </span>
             BELEZA ACESSÍVEL
