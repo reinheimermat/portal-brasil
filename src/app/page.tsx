@@ -9,7 +9,7 @@ export default function Home() {
   const { scrollYProgress } = useScroll()
   const text =
     'Temos a inovação como base do nosso negócio. Não basta apenas conhecer as tendências, é necessário interpretá-las corretamente. Aplicamos isso na construção de produtos que valorizam a beleza, combinando design e estratégia para fortalecer sua marca.'
-  const words = text.split(' ')
+  const words = text.split('  ')
 
   return (
     <div>
@@ -38,12 +38,12 @@ export default function Home() {
         </section>
       </main>
 
-      <section className="-mt-3 bg-[#212121] pb-20 pt-11 md:pb-28">
-        <div className="container mx-auto px-4 text-center italic leading-normal">
+      <section className="bg-[#212121]">
+        <div className="container mx-auto px-20 py-[5.69rem] text-center italic leading-normal">
           {words.map((word, index) => {
             const color = useTransform(
               scrollYProgress,
-              [0 + index * 0.005, 0.2 + index * 0.005],
+              [0 + index * 0.004, 0.2 + index * 0.004],
               ['#454545', '#fff'],
             )
 
@@ -51,7 +51,7 @@ export default function Home() {
               <motion.span
                 key={index}
                 style={{ color }}
-                className="inline-block text-4xl md:text-6xl lg:text-7xl 2xl:text-8xl"
+                className="inline-block text-4xl md:text-5xl"
               >
                 {word}
               </motion.span>
