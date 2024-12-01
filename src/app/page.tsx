@@ -66,8 +66,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto space-y-5 px-4 pt-14">
-        <h1 className="text-3xl">Cases de sucesso</h1>
+      <section className="container mx-auto space-y-5 px-4 pt-9">
+        <div className="space-y-6 pb-9 text-center">
+          <h2 className="text-lg">
+            AQUI VOCÊ ENCONTRARÁ UM POUCO DE TUDO <br /> DO QUE NOS ORGULHAMOS
+          </h2>
+          <h1 className="text-7xl">Cases que amamos</h1>
+        </div>
 
         <div className="grid grid-cols-1 gap-x-5 gap-y-[3.75rem] lg:grid-cols-2">
           {Array.from({ length: 6 }).map((_, index) => (
