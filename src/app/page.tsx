@@ -157,15 +157,19 @@ export default function Home() {
             <p>hi@thedesignersclub.at</p>
           </div>
 
-          <div className="flex items-center justify-between text-lg">
+          <div className="flex flex-col gap-6 text-lg uppercase md:flex-row md:items-center md:justify-between">
             <div>
               <p>
                 The Designers Club <br /> STEINGASSE 10-14/21A <br /> 1030 WIEN
               </p>
             </div>
-            <div className="flex flex-col gap-1 pe-[90px] text-center uppercase">
-              <Link href="#">Instagram</Link>
-              <Link href="#">Linkedin</Link>
+            <div className="flex flex-col gap-1 text-center md:pe-[90px]">
+              <Link href="#" className="hover:underline">
+                Instagram
+              </Link>
+              <Link href="#" className="hover:underline">
+                Linkedin
+              </Link>
             </div>
             <div className="text-end">
               <p>

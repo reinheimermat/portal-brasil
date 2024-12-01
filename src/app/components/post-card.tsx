@@ -16,7 +16,7 @@ export function PostCard({ image, title, date, tags }: PostCardProps) {
         <Image
           src={image}
           alt="alt"
-          className="h-[32.625rem] w-full"
+          className="h-[32.625rem] w-full rounded-md object-cover"
           width={417}
           height={522}
         />
