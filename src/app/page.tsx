@@ -2,8 +2,37 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 
+import defaultImage from '../assets/img-default.png'
 import { Card } from './components/card'
 import { Header } from './components/header'
+import { PostCard } from './components/post-card'
+
+const cases = [
+  {
+    title: 'Título do post com breve descrição do conteúdo ou chamada atrativa',
+    tags: ['tag 1', 'tag 2'],
+  },
+  {
+    title: 'Título do post com breve descrição do conteúdo ou chamada atrativa',
+    tags: ['tag 1', 'tag 2'],
+  },
+  {
+    title: 'Título do post com breve descrição do conteúdo ou chamada atrativa',
+    tags: ['tag 1', 'tag 2'],
+  },
+  {
+    title: 'Título do post com breve descrição do conteúdo ou chamada atrativa',
+    tags: ['tag 1', 'tag 2'],
+  },
+  {
+    title: 'Título do post com breve descrição do conteúdo ou chamada atrativa',
+    tags: ['tag 1', 'tag 2'],
+  },
+  {
+    title: 'Título do post com breve descrição do conteúdo ou chamada atrativa',
+    tags: ['tag 1', 'tag 2'],
+  },
+]
 
 export default function Home() {
   const { scrollYProgress } = useScroll()
@@ -66,9 +95,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto space-y-5 px-4 pt-9">
+      <section className="container mx-auto space-y-5 px-4 pb-16 pt-20">
         <div className="space-y-6 pb-9 text-center">
-          <h2 className="text-lg">
+          <h2 className="font-sans text-lg">
             AQUI VOCÊ ENCONTRARÁ UM POUCO DE TUDO <br /> DO QUE NOS ORGULHAMOS
           </h2>
           <h1 className="text-7xl">Cases que amamos</h1>
@@ -84,8 +113,35 @@ export default function Home() {
             />
           ))}
 
-          <div className="rounded-md bg-zinc-100 py-10 text-center text-xl text-zinc-500 lg:col-span-2">
-            <p>Ver Ver todos os cases</p>
+          <button className="mx-auto w-full max-w-[26rem] rounded-md bg-zinc-100 px-16 py-8 text-center font-sans text-xl text-zinc-400 lg:col-span-2">
+            Ver todos os cases
+          </button>
+        </div>
+      </section>
+
+      <section className="bg-[#212121] pt-24 text-[#F7F6F4]">
+        <div className="container mx-auto px-4">
+          <h2 className="pb-20 text-center font-sans text-lg font-medium">
+            Empresas que inspiramos <br /> Com a nossa transformação
+          </h2>
+
+          <div className="space-y-8">
+            <h2 className="text-center font-sans text-lg">
+              AQUI VOCÊ ENCONTRARÁ UM POUCO DE <br /> TUDO DO QUE NOS{' '}
+              <span className="font-serif italic">ORGULHAMOS</span>
+            </h2>
+
+            <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
+              {cases.map((item, index) => (
+                <PostCard
+                  key={index}
+                  image={defaultImage}
+                  title={item.title}
+                  tags={item.tags}
+                  date="10/10/2021"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

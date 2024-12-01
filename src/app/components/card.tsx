@@ -20,8 +20,8 @@ export function Card({ description, title }: CardProps) {
       />
 
       <div className="space-y-1">
-        <h2 className="text-[2.625rem] font-medium">{title}</h2>
-        <p className="text-lg">{description}</p>
+        <h2 className="text-[2.625rem] font-medium italic">{title}</h2>
+        <p className="font-sans text-lg">{description}</p>
       </div>
     </div>
   )
