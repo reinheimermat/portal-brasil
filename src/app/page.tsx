@@ -39,7 +39,7 @@ export default function Home() {
       </main>
 
       <section className="bg-[#212121]">
-        <div className="container mx-auto px-20 py-[5.69rem] text-center leading-normal">
+        <div className="container mx-auto px-20 pb-36 pt-[5.69rem] text-center leading-normal">
           {words.map((word, index) => {
             const color = useTransform(
               scrollYProgress,
@@ -51,7 +51,7 @@ export default function Home() {
               <motion.span
                 key={index}
                 style={{ color }}
-                className="inline-block whitespace-pre-line text-4xl font-thin md:text-5xl"
+                className="inline-block whitespace-pre-line text-4xl font-thin lg:text-4xl xl:text-5xl"
               >
                 <span className="italic">
                   Temos a inovação como base do nosso negócio. <br />
