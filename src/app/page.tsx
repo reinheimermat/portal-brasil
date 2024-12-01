@@ -1,10 +1,12 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
+import Link from 'next/link'
 
 import defaultImage from '../assets/img-default.png'
 import { Card } from './components/card'
 import { Header } from './components/header'
+import { LogoXL } from './components/logo-xl'
 import { PostCard } from './components/post-card'
 
 const cases = [
@@ -145,6 +147,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <footer className="bg-[#212121] pt-24 text-[#F7F6F4]">
+        <div className="container mx-auto space-y-32 px-4 pt-20 font-sans">
+          <LogoXL />
+
+          <div className="w-auto text-center text-lg uppercase">
+            <p>+4367718069246</p>
+            <p>hi@thedesignersclub.at</p>
+          </div>
+
+          <div className="flex items-center justify-between text-lg">
+            <div>
+              <p>
+                The Designers Club <br /> STEINGASSE 10-14/21A <br /> 1030 WIEN
+              </p>
+            </div>
+            <div className="flex flex-col gap-1 pe-[90px] text-center uppercase">
+              <Link href="#">Instagram</Link>
+              <Link href="#">Linkedin</Link>
+            </div>
+            <div className="text-end">
+              <p>
+                Impressum <br /> Datenschutz
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

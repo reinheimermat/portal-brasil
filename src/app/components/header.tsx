@@ -28,7 +28,7 @@ export function Header() {
 
   return (
     <motion.header
-      className="fixed w-full pb-4 pt-8 text-white transition-colors"
+      className="fixed z-10 w-full pb-4 pt-8 text-white transition-colors"
       animate={{ backgroundColor: scrolled ? 'black' : 'transparent' }}
       transition={{ duration: 0.6 }}
     >
