@@ -1,7 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
 
-// import image from '../../assets/img-default.png'
-
 interface PostCardProps {
   image: StaticImageData
   title: string

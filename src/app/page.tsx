@@ -1,9 +1,12 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import defaultImage from '../assets/img-default.png'
+import map from '../assets/map.png'
+import nubank from '../assets/nu.png'
 import { Card } from './components/card'
 import { Header } from './components/header'
 import { LogoXL } from './components/logo-xl'
@@ -70,7 +73,7 @@ export default function Home() {
       </main>
 
       <section className="bg-[#212121]">
-        <div className="container mx-auto px-8 pb-36 pt-28 text-center leading-normal md:px-20">
+        <div className="container mx-auto -mt-4 px-8 pb-36 pt-28 text-center leading-normal md:px-20">
           {words.map((word, index) => {
             const color = useTransform(
               scrollYProgress,
@@ -123,11 +126,29 @@ export default function Home() {
 
       <section className="bg-[#212121] pt-24 text-[#F7F6F4]">
         <div className="container mx-auto px-4">
-          <h2 className="pb-20 text-center font-sans text-lg font-medium">
+          <h2 className="pb-20 text-center font-sans text-lg font-medium uppercase">
             Empresas que inspiramos <br /> Com a nossa transformação
           </h2>
 
-          <div className="space-y-8">
+          <article>
+            <aside className="z-60 relative -mb-64 grid grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4">
+              {Array.from({ length: 12 }).map((_, index) => (
+                <Image
+                  key={index}
+                  src={nubank}
+                  alt="Client"
+                  width={150}
+                  height={150}
+                  className="block w-full rounded-full"
+                />
+              ))}
+            </aside>
+            <aside>
+              <Image src={map} alt="mapa" className="w-full bg-cover" />
+            </aside>
+          </article>
+
+          <div className="mt-28 space-y-8">
             <h2 className="text-center font-sans text-lg">
               AQUI VOCÊ ENCONTRARÁ UM POUCO DE <br /> TUDO DO QUE NOS{' '}
               <span className="font-serif italic">ORGULHAMOS</span>
@@ -148,7 +169,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-[#212121] pt-24 text-[#F7F6F4]">
+      <footer className="bg-[#212121] pb-6 pt-24 text-[#F7F6F4]">
         <div className="container mx-auto space-y-32 px-4 pt-20 font-sans">
           <LogoXL />
 
